@@ -1,5 +1,16 @@
 ### CHANGELOG
+
+#### Version 2.4.103 - June 11, 2013
  
+	- Updated stubs for 103 release.
+	- Removed deprecated methods like setAccessToken, getAccessToken from baseService in core.
+    - Added correct thirdparty auth header in core.
+	- Updated install script in samples to handle wildcard tag names. 
+	
+You can see source code of this release in github under https://github.com/paypal/adaptivepayments-sdk-php/tree/v2.4.103.
+
+--------------------------------------------------------------------------------------------------
+
 #### Version 2.3.101 - April 30, 2013
 
    - Updated stubs for 101 release
@@ -8,7 +19,7 @@ You can see source code of this release in github under https://github.com/paypa
 
 --------------------------------------------------------------------------------------------------
 
-#### Version v2.3.100 - March 25, 2013
+#### Version 2.3.100 - March 25, 2013
  
    - Updated stubs for 100 release
    - Added dynamic configuration support by passing configuration parameters using hash map.
