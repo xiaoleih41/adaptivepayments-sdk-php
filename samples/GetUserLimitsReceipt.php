@@ -19,7 +19,11 @@ if( $_POST['email'] != "" || ($_POST['phoneCountry'] != "" && $_POST['phoneNumbe
 		}
 	}
 }
-$service = new AdaptivePaymentsService();
+
+/*
+ *  Configuration::getSignatureConfig() returns array that contains credential and config parameters
+ */
+$service = new AdaptivePaymentsService(Configuration::getSignatureConfig());
 try {
 	$response = $service->GetUserLimits($getUserLimitsReq);
 } catch(Exception $ex) {
