@@ -219,6 +219,7 @@ resulting errors */
 
 <body>	
 	<div id="wrapper">
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
 		<div id="response_form">
 			<h3>Pay - Response</h3>			
 <?php
