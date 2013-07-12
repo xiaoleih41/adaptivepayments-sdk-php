@@ -102,56 +102,21 @@ if($ack != "SUCCESS") {
 	echo "</pre>";
 } else {
 	$payKey = $response->payKey;
-	if(($response->paymentExecStatus == "COMPLETED" )) {
-		$case ="1";
-	} else if(($_POST['actionType']== "PAY") && ($response->paymentExecStatus == "CREATED" )) {
-		$case ="2";
-	}  else if(($_POST['actionType']== "PAY_PRIMARY")) {
-		$case ="4";
-	} else if(($_POST['actionType']== "CREATE") && ($response->paymentExecStatus == "CREATED" )) {
-	// check if API caller is the money sender (implicit payment)
-		if('jb-us-seller@paypal.com' == $_POST["senderEmail"]) {
-			$case ="3";
-		} else {
-			$case ="2";
-		}
-	}
-	$token = $response->payKey;
-	$payPalURL = PAYPAL_REDIRECT_URL . '_ap-payment&paykey=' . $token;
-	switch($case) {
-		case "1" :
-			echo "<table>";
-			echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
-			echo "<tr><td>PayKey :</td><td><div id='PayKey'>$payKey</div> </td></tr>";
-			echo "</table>";
-			break;
-		case "2" :
-			echo "<table>";
-			echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
-			echo "<tr><td>PayKey :</td><td><div id='PayKey'>$payKey</div> </td></tr>";
-			echo "<tr><td><a href=$payPalURL><b>Redirect URL to Complete Payment </b></a></td></tr>";
-			echo "</table>";
-			break;
-		case "3" :
-			echo "<table>";
-			echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
-			echo "<tr><td>PayKey :</td><td><div id='PayKey'>$payKey</div> </td></tr>";
-			echo "<tr><td><a href=$payPalURL><b>Redirect URL to Complete Payment </b></a></td></tr>";
-			echo "<tr><td><a href=../SetPaymentOptions.php?payKey=$payKey><b>Set Payment Options(optional)</b></a></td></tr>";
-			echo "<tr><td><a href=../ExecutePayment.php?payKey=$payKey><b>Execute Payment </b></a></td></tr>";
-			echo "</table>";
-			break;
-		case "4" :
-			echo"Payment to \"Primary Receiver\" is Complete<br/>";
-			echo"<a href=../ExecutePayment.php?payKey=$payKey><b>* \"Execute Payment\" to pay to the secondary receivers</b></a><br>";
-			break;
-	}
+	$payPalURL = PAYPAL_REDIRECT_URL . '_ap-payment&paykey=' . $payKey;
+	
+	echo "<table>";
+	echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
+	echo "<tr><td>PayKey :</td><td><div id='PayKey'>$payKey</div> </td></tr>";
+	echo "<tr><td><a href=$payPalURL><b>Redirect URL to Complete Payment to \"Primary Receiver\"</b></a></td></tr>";
+	echo "<tr><td>To complete payment for secondary receiver, have to make Execute Payment API call after redirection at later point.</td></tr>";
+	echo "</table>";
 	echo "<pre>";
 	print_r($response);
 	echo "</pre>";	
 }
 require_once '../Common/Response.php';
 ?>
+<script>localStorage.setItem('payKey', '<?php echo $payKey?>');</script>
 		</div>
 	</div>
 </body>

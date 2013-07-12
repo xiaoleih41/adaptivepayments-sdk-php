@@ -29,13 +29,10 @@
 				<div class="params">
 					<div class="param_name">Action type *</div>
 					<div class="param_value">
-						<select name="actionType" id="actionType">
-							<option value="PAY">PAY</option>
-							<option value="CREATE">CREATE</option>
-						</select>
+						<input name="actionType" id="actionType" value="PAY" readonly="readonly"/>
 					</div>
 				</div>
-								<div class="params">
+				<div class="params">
 					<div class="param_name">Return Url</div>
 					<div class="param_value">
 						<input name="returnUrl" id="returnUrl" value="<?php echo $returnUrl;?>" />

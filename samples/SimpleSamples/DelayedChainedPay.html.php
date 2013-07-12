@@ -11,7 +11,7 @@
 	$serverName = $_SERVER['SERVER_NAME'];
 	$serverPort = $_SERVER['SERVER_PORT'];
 	$url = dirname('http://' . $serverName . ':' . $serverPort . $_SERVER['REQUEST_URI']);
-	$returnUrl = $url . "/../WebflowReturnPage.php";
+	$returnUrl = $url . "/../ExecutePayment.php";
 	$cancelUrl =  $url . "/DelayedChainedPay.html.php";
 ?>
 
@@ -31,13 +31,11 @@
 				<div class="params">
 					<div class="param_name">Action type *</div>
 					<div class="param_value">
-						<select name="actionType" id="actionType">
-							<option value="PAY_PRIMARY">PAY_PRIMARY</option>
-						</select>
+						<input name="actionType" id="actionType" value="PAY_PRIMARY" />
 					</div>
 				</div>
 				<div class="params">
-					<div class="param_name">Return Url</div>
+					<div class="param_name">Return Url *</div>
 					<div class="param_value">
 						<input name="returnUrl" id="returnUrl" value="<?php echo $returnUrl;?>" />
 					</div>
@@ -73,7 +71,7 @@
 					<tr id="receiverTable_0">
 						<td align="left"><input type="checkbox" name="receiver[]" id="receiver_0"  /></td>
 						<td>
-							<input type="text" name="receiverEmail[]" id="receiveremail_0" value="platfo_1255612361_per@gmail.com">
+							<input type="text" name="receiverEmail[]" id="receiveremail_0" value="jb-us-seller@paypal.com">
 						</td>
 						<td>
 							<input type="text" name="receiverAmount[]" id="amount_0" value="1.0" class="smallfield">

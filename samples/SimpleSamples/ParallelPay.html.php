@@ -36,11 +36,7 @@
 				<div class="params">
 					<div class="param_name">Action type *</div>
 					<div class="param_value">
-						<select name="actionType" id="actionType">
-							<option value="PAY">PAY</option>
-							<option value="CREATE">CREATE</option>
-							<option value="PAY_PRIMARY">PAY_PRIMARY</option>
-						</select>
+						<input name="actionType" id="actionType" value="PAY" readonly="readonly"/>
 					</div>
 				</div>
 				<div class="params">
