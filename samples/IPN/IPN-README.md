@@ -8,10 +8,6 @@ IPN Overview :
   a response string "VERIFIED" or "INVALID".
 * PayPal will continuously resend this IPN, if a wrong IPN is sent.
 
-IPN configuration :
------------------
-* Ipn endpoint url is specified in 'config/sdk_config.ini' as 'service.Endpoint.IPN'. This will be used for ipn post back
-    
 IPN How to use
 --------------
 * Include 'ipn/PPIPNMessage.php' in your IPN callback URL  
