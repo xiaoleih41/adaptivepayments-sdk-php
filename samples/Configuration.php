@@ -1,6 +1,7 @@
 <?php 
 class Configuration
 {
+	// For a full list of configuration parameters refer at [https://github.com/paypal/adaptivepayments-sdk-php/wiki/SDK-Configuration-Parameters]
 	public static function getConfig()
 	{
 		$config = array(
