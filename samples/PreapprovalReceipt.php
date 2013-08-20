@@ -160,9 +160,9 @@ if($_POST['displayMaxTotalAmount'] != null) {
 /*
  * 	 ## Creating service wrapper object
 Creating service wrapper object to make API call and loading
-Configuration::getSignatureConfig() returns array that contains credential and config parameters
+Configuration::getAcctAndConfig() returns array that contains credential and config parameters
  */
-$service = new AdaptivePaymentsService(Configuration::getSignatureConfig());
+$service = new AdaptivePaymentsService(Configuration::getAcctAndConfig());
 try {
 	/* wrap API method calls on the service object with a try catch */
 	$response = $service->Preapproval($preapprovalRequest);

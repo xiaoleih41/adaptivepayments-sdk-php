@@ -5,9 +5,9 @@ require_once('PPBootStrap.php');
 $getAvailableShippingAddressesReq = new GetAvailableShippingAddressesRequest(new RequestEnvelope("en_US"), $_POST['key']);
 
 /*
- Configuration::getSignatureConfig() returns array that contains credential and config parameters
+ Configuration::getAcctAndConfig() returns array that contains credential and config parameters
  */
-$service = new AdaptivePaymentsService(Configuration::getSignatureConfig());
+$service = new AdaptivePaymentsService(Configuration::getAcctAndConfig());
 try {
 	$response = $service->GetAvailableShippingAddresses($getAvailableShippingAddressesReq);
 } catch(Exception $ex) {
