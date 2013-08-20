@@ -34,7 +34,7 @@ try {
 
 <body>
 	<div id="wrapper">
-		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png"/>
 		<div id="response_form">
 			<h3>Get Funding Plans</h3>
 <?php 
