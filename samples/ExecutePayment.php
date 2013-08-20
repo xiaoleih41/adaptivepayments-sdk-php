@@ -46,7 +46,7 @@ function getPayKey(){
 					<input type="submit" name="ExecutePaymentBtn"
 						value="ExecutePayment" /><br />
 				</div>
-				<a href="index.html">Home</a>
+				<a href="index.php">Home</a>
 			</div>
 		</form>		
 	</div>

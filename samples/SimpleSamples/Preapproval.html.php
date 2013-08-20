@@ -55,7 +55,7 @@ $cancelUrl =  $url."/CancelPreapproval.php";
 				</div>
 			</form>
 		</div>
-		<a href="index.php">Home</a>
+		<a href="../index.php">Home</a>
 	</div>
 </body>
 </html>

@@ -22,7 +22,7 @@ top.close();
 
 <body>
 	<div id="wrapper">
-		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png"/>
 		<div id="header">
 			<h3>Embedded Pay</h3>
 			<div id="apidetails">The Pay API operation is used to transfer
@@ -86,7 +86,7 @@ top.close();
 				</div>
 			</form>
 		</div>
-		<a href="index.php">Home</a>
+		<a href="../index.php">Home</a>
 	</div>
 </body>
 </html>
