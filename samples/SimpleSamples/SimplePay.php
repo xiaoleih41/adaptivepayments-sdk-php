@@ -87,7 +87,7 @@ resulting errors */
 
 <body>	
 	<div id="wrapper">
-		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png">
+		<img src="https://devtools-paypal.com/image/bdg_payments_by_pp_2line.png"/>
 		<div id="response_form">
 			<h3>Pay - Response</h3>			
 <?php
@@ -98,8 +98,8 @@ if($ack != "SUCCESS") {
 	echo "</pre>";
 } else {
 	
-	$token = $response->payKey;
-	$payPalURL = PAYPAL_REDIRECT_URL . '_ap-payment&paykey=' . $token;
+	$payKey = $response->payKey;
+	$payPalURL = PAYPAL_REDIRECT_URL . '_ap-payment&paykey=' . $payKey;
 			echo "<table>";
 			echo "<tr><td>Ack :</td><td><div id='Ack'>$ack</div> </td></tr>";
 			echo "<tr><td>PayKey :</td><td><div id='PayKey'>$payKey</div> </td></tr>";
