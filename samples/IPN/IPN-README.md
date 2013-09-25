@@ -1,16 +1,17 @@
-PN Overview :
 
-PayPal Instant Payment Notification is call back system that initiated once a tranction is completed
-(eg: When a Pay API completed successfully).
-You will receive the transaction related IPN variables on your call back url that you have specified in your request.
+## IPN Overview :
+
+PayPal Instant Payment Notification is call back system that is triggered once a tranction is completed
+(eg: When a Pay API completed successfully). You will receive the transaction related IPN variables on your call back url that you have specified in your request.
 You have to send this IPN variable back to PayPal system for verification, Upon verification PayPal will send
-a response string "VERIFIED" or "INVALID".
-PayPal will continuously resend this IPN, if a wrong IPN is sent.
-IPN How to use
+a response string "VERIFIED" or "INVALID". PayPal will continuously resend this IPN, if a wrong IPN is sent.
+
+### How to use
 
 Include 'ipn/PPIPNMessage.php' in your IPN callback URL
 Initialize IPNMessage constructor with a map containing configuration parameters, as shown below.
 
+```php
 // Array containing configuration parameters. (not required if config file is used)
 $config = array(
     // values: 'sandbox' for testing
@@ -23,10 +24,13 @@ $config = array(
     
 );
 $ipnMessage = new PPIPNMessage(null, $config);   
+$ipnMessage->validate();
+```
+
 'validate()' method validates the IPN message and returns true if 'VERIFIED' or returns false if 'INVALID'
 Ex: $result = $ipnMessage->validate();
 
-Initiating IPN:
+### Initiating IPN
 
 Make an PayPal API call (eg: Pay ), setting the IpnNotificationUrl field of API request
 to the url of deployed IPNLIstener sample(eg:https://example.com/adaptivepayments-sdk-php/IPN/IPNListener.php)
@@ -41,8 +45,10 @@ To access the IPN received use 'getRawData()' which give an array of received IP
 Ex:
 
 $ipnMessage->getRawData(); 
-IPN variables :
 
+### IPN variables 
+
+```
 [Transaction]
 
 transaction_type
@@ -103,9 +109,10 @@ cancel_url
 approved
 charset
 trackingId
+```
 
 For a full list of IPN variables you need to check log file, that IPN Listener is logging into.
 
-IPN Reference :
+### IPN Reference 
 
-You can refer IPN getting started guide at [https://www.x.com/developers/paypal/documentation-tools/ipn/gs_IPN]
+You can refer to the [IPN getting started guide] (https://developer.paypal.com/webapps/developer/docs/classic/ipn/gs_IPN/)
