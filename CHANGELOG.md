@@ -1,6 +1,12 @@
-### CHANGELOG
+###CHANGELOG
+#### Version 2.6.110 - March 06, 2014
+ 
+	- Updated stubs for 110 release 
+	
+You can see source code of this release in github under https://github.com/paypal/adaptivepayments-sdk-php/tree/v2.6.110.
+--------------------------------------------------------------------------------------------------
 
-#### Version 2.5.106 - August 22, 2013
+####Version 2.5.106 - August 22, 2013
  
 	- Updated stubs.
 	- Updated samples to showcase dynamic configuration. 
