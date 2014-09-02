@@ -2366,9 +2366,49 @@ class ExecutePaymentRequest
 
 
 /**
+ * Contains information related to State Regulatory Agency
+ * Information of the Sender's country for RTR transaction This
+ * contains 1.Agency Name 2.Phone Number 3.Website 
+ */
+class StateRegulatoryAgencyInfo  
+  extends PPMessage   {
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $Name;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $PhoneNo;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var string 	 
+	 */ 
+	public $Website;
+
+
+}
+
+
+
+/**
  * Contains information related to Post Payment Disclosure
  * Details This contains 1.Receivers information 2.Funds
- * Avalibility Date 
+ * Avalibility Date 3.State Regulatory Agency Information 
  */
 class PostPaymentDisclosure  
   extends PPMessage   {
@@ -2399,6 +2439,15 @@ class PostPaymentDisclosure
 	 * @var string 	 
 	 */ 
 	public $fundsAvailabilityDateDisclaimerText;
+
+	/**
+	 * 
+	 * @access public
+	 
+	 	 	 	 
+	 * @var StateRegulatoryAgencyInfo 	 
+	 */ 
+	public $stateRegulatoryAgencyInfo;
 
 
 }
