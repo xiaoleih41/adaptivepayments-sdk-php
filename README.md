@@ -67,7 +67,7 @@ For example,
 
 	$service = new AdaptivePaymentsService($config);
 	$response = $service->Pay($payRequest);	
-	if(strtoupper($response->responseEnvelope->ack == 'SUCCESS') {
+	if(strtoupper($response->responseEnvelope->ack) == 'SUCCESS') {
 		// Success
 	}
 ```  
