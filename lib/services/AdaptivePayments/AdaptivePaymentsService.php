@@ -15,7 +15,7 @@ class AdaptivePaymentsService extends PPBaseService {
 	private static $SDK_NAME = "adaptivepayments-php-sdk";
 	
 	// SDK Version
-	private static $SDK_VERSION = "2.7.117";
+	private static $SDK_VERSION = "2.8.117";
 
 
     /**

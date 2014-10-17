@@ -1,4 +1,12 @@
 ###CHANGELOG
+
+#### Version 2.8.117 - Oct 17, 2014
+
+    - Updated code to use newer SDK Core
+
+You can see source code of this release in github under https://github.com/paypal/adaptivepayments-sdk-php/tree/v2.8.117.
+--------------------------------------------------------------------------------------------------
+
 #### Version 2.7.117 - September 02, 2014
  
 	- Updated stubs for 1.8.7 release 
