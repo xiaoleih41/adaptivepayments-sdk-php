@@ -1,5 +1,17 @@
 ### CHANGELOG
 
+####Version 3.9.2 - Apr 8, 2016
+
+   - Removed Duplicate Directories.
+
+####Version 3.9.1 - Dec 9, 2015
+
+   - Added TLSv1.2 Endpoint support
+
+####Version 3.9.0 - Sep 22, 2015
+
+   - Updated IPN Endpoint
+
 ####Version 3.6.106 - August 22, 2013
 
 	- Updated stubs.
@@ -13,7 +25,7 @@ You can see source code of this release in github under https://github.com/paypa
 	- Updated stubs for 103 release.
 	- Removed deprecated methods like setAccessToken, getAccessToken from baseService in core.
     - Added correct thirdparty auth header in core.
-	- Updated install script in samples to handle wildcard tag names. 
+	- Updated install script in samples to handle wildcard tag names.
 
 You can see source code of this release in github under https://github.com/paypal/adaptivepayments-sdk-php/tree/v3.5.103
 
@@ -22,5 +34,5 @@ You can see source code of this release in github under https://github.com/paypa
 #### Version 3.4.102 - May 20, 2013
 
     - Updating SDK to use NameSpaces, Supported from PHP 5.3 and above
-    
+
 You can see source code of this release in github under https://github.com/paypal/adaptivepayments-sdk-php/tree/v3.4.102
